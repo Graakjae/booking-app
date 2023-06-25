@@ -1,8 +1,6 @@
 import "./hotel.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleArrowLeft,
@@ -98,11 +96,11 @@ const Hotel = () => {
             </div>
           )}
           <div className="hotelWrapper">
-            <button className="bookNow">Reserve or Book Now!</button>
+            <button className="bookNow" onClick={handleClick}>Reserve or Book Now!</button>
             <h1 className="hotelTitle">{data.name}</h1>
             <div className="hotelAddress">
               <FontAwesomeIcon icon={faLocationDot} />
-              <span>{data.address}</span>
+              <span>{data.city}</span>
             </div>
             <span className="hotelDistance">
               Excellent location – {data.distance}m from center
@@ -129,21 +127,15 @@ const Hotel = () => {
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">
-                <h1>Perfect for a {days}-night stay!</h1>
-                <span>
-                  Located in the real heart of Krakow, this property has an
-                  excellent location score of 9.8!
-                </span>
+                <h1>Perfect for a {days ? days : ""} night stay!</h1>
                 <h2>
-                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{" "}
+                  <b>${days ? days * data.cheapestPrice * options.room : 1 * data.cheapestPrice * options.room }</b> ({days ? days : 1}{" "}
                   nights)
                 </h2>
                 <button onClick={handleClick}>Reserve or Book Now!</button>
               </div>
             </div>
           </div>
-          <MailList />
-          <Footer />
         </div>
       )}
       {openModal && <Reserve setOpen={setOpenModal} hotelId={id}/>}
