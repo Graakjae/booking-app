@@ -1,29 +1,29 @@
 .homeContainer {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .homeTitle {
-  width: 1024px;
-  font-size: 20px;
-  color: white;
+    width: 1024px;
+    font-size: 20px;
+    color: white;
 }
 
 .backgroundImg {
-  position: absolute;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
 }
 
 .opacity {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  position: absolute;
-  opacity: 30%;
-  z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 30%;
+    z-index: -1;
 }

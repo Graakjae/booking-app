@@ -26,14 +26,17 @@ const List = () => {
     return (
         <div>
             <Navbar />
-            <Header type="list" />
             <div className="listContainer">
                 <div className="listWrapper">
                     <div className="listSearch">
                         <h1 className="lsTitle">Search</h1>
                         <div className="lsItem">
                             <label>Destination</label>
-                            <input placeholder={destination} onChange={(e) => setDestination(e.target.value)} type="text" />
+                            <input
+                                placeholder={destination}
+                                onChange={e => setDestination(e.target.value)}
+                                type="text"
+                            />
                         </div>
                         <div className="lsItem">
                             <label>Check-in Date</label>
